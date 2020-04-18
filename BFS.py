@@ -1,8 +1,10 @@
 import queue
 
 
-def createMaze():
+def mazeCreation():
     maze = []
+    #we append "#" as the blocks or obstacles
+    # we O as origin and X as end point of maze
     maze.append(["#","#", "#", "#", "#", "O","#"])
     maze.append(["#"," ", " ", " ", "#", " ","#"])
     maze.append(["#"," ", "#", " ", "#", " ","#"])
@@ -13,7 +15,7 @@ def createMaze():
 
     return maze
 
-def createMaze2():
+def maze2Creation():
     maze = []
     maze.append(["#","#", "#", "#", "#", "O", "#", "#", "#"])
     maze.append(["#"," ", " ", " ", " ", " ", " ", " ", "#"])
@@ -121,7 +123,8 @@ def findEnd(maze, moves):
 nums = queue.Queue()
 nums.put("")
 add = ""
-maze  = createMaze2()
+#here choose which maze u want to perform algo
+maze  = maze2Creation()
 
 while not findEnd(maze, add): 
     add = nums.get()
